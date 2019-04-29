@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
 
   signinForm: FormGroup;
   submitted = false;
+  loading: any;
 
   constructor(private formBuilder: FormBuilder) { }
 

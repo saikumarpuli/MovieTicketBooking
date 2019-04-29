@@ -1,0 +1,7 @@
+body{background-color: white;}
+header{background-color:lightblue ;  text-align:center;    border-style:solid;   border-color:lightblue ; height:50px }
+#screen{ color:white;  background-color:red;    border-style:solid;   border-color:red;     text-align:center;   height:50px;}
+#bronze{ color:white;  background-color:green;    border-style:solid;   border-color:green;     text-align:center;   height:40px;}
+#Silver{ color:white;  background-color:green;    border-style:solid;   border-color:green;     text-align:center;   height:40px;}
+#Gold{ color:white;  background-color:green;    border-style:solid;   border-color:green;     text-align:center;   height:40px;}
+
