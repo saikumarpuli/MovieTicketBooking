@@ -1,0 +1,17 @@
+{
+  "generator-ng-fullstack": {
+    "appName": "Movie Ticket Booking",
+    "username": "saikumarpuli",
+    "userEmail": "saikumarpuli9@gmail.com",
+    "stack": "server",
+    "repoHostUrl": "github.com",
+    "userNameSpace": "saikumarpuli",
+    "client": "",
+    "server": "node",
+    "nodeWebFrameworkServer": "express",
+    "transpilerServer": "babel",
+    "secure": false,
+    "testsSeparated": true,
+    "boilerplate": true
+  }
+}

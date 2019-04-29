@@ -1,3 +1,32 @@
+<div style="background-color: lightcyan">
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="margin-bottom:25px">
+  <h1 style="text-align:center">
+    Current slide: {{slideshow.slideIndex}}
+  </h1>
+  <slideshow #slideshow
+             [imageUrls]="imageUrls"
+             [height]="height"
+             [minHeight]="minHeight"
+             [arrowSize]="arrowSize"
+             [showArrows]="showArrows"
+             [disableSwiping]="disableSwiping"
+             [autoPlay]="autoPlay"
+             [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+             [debug]="debug"
+             [backgroundSize]="backgroundSize"
+             [backgroundPosition]="backgroundPosition"
+             [backgroundRepeat]="backgroundRepeat"
+             [showDots]="showDots"
+             [dotColor]="dotColor"
+             [showCaptions]="showCaptions"
+             [captionColor]="captionColor"
+             [captionBackground]="captionBackground"
+             [lazyLoad]="lazyLoad"
+             [hideOnNoSlides]="hideOnNoSlides"
+             [fullscreen]="fullscreen">
+  </slideshow>
+</div>
 <div class="container-fluid  ">
   <div class="row">
     <div class="col-md-4 pt-5  ">
@@ -28,4 +57,5 @@
 
     </div>
   </div>
+</div>
 </div>

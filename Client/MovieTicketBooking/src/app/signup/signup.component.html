@@ -1,9 +1,8 @@
-<div class="jumbotron">
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <h2>Registrtation</h2>
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
           <div class="form-group">
             <label>Full Name</label>
             <input type="text" formControlName="fullName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" />
@@ -40,11 +39,10 @@
           </div>
           <div class="form-group">
             <tr> <td><button class="btn btn-primary">Register</button></td>
-              <td><button type="reset" class="btn btn-primary ml-5">reset</button></td></tr>
+              <td><button type="reset" class="btn btn-primary ml-5">Reset</button></td></tr>
           </div>
 
         </form>
       </div>
     </div>
   </div>
-</div>

@@ -12,6 +12,7 @@ import { TheatreDetailsComponent } from './theatre-details/theatre-details.compo
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {AngularFontAwesomeModule} from "angular-font-awesome";
+import {SlideshowModule} from "ng-simple-slideshow";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import {AngularFontAwesomeModule} from "angular-font-awesome";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class SignupComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
-
+  details:any;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -24,14 +24,15 @@ export class SignupComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() { return this.registerForm.controls; }
 
-  onSubmit() {
+  onSubmit(value: any) {
     this.submitted = true;
-
+    this.details=value;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
       return;
     }
-
-    alert('SUCCESS!! :-)');
+    else {
+      alert(this.details.fullName);
+    }
   }
 }
