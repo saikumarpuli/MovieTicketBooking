@@ -1,22 +1,23 @@
+
 {
   "development": {
     "username": "postgres",
     "password": "saikumar",
-    "database": "MovieTicket_development",
+    "database": "movieticket_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "saikumar",
-    "database": "MovieTicket_test",
+    "database": "movieTicket_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
     "password": "saikumar",
-    "database": "MovieTicket_production",
+    "database": "movieTicket_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
