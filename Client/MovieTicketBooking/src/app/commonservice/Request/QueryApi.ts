@@ -7,11 +7,10 @@ export class QueryApi {
   constructor(private http: HttpClient) {
 
   }
-  /*
   doGet(url: any, params: any) {
     url = UserEndPoint(url, params);
     return this.http.get(url, params);
-  }*/
+  }
 
   doPost(url: any, params: any) {
     url = UserEndPoint(url, params);

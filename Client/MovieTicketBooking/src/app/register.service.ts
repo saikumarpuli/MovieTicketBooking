@@ -15,4 +15,12 @@ export class RegisterService {
       .pipe(
         catchError(err => of([err]))
       );
-  }}
+  }
+  getCourseDetails():Observable<any>{
+    let params;
+    return this.queryApi.doGet('REGISTRATION',params)
+      .pipe(
+        catchError(err => of([err]))
+      );
+  }
+}
