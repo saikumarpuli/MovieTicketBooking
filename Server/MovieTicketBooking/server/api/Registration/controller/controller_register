@@ -1,0 +1,18 @@
+import RegisterDao from "../dao/dao_register"
+export default class RegisterController{
+  static getall(req,res){
+    RegisterDao.getAll()
+      .then(results=>res.status(200).json(results))
+      .catch(error=>res.status(400).json("error occur"))
+  }
+
+  static createNew(req,res){
+    RegisterDao.createNew(req.body)
+      .then(results=>res.status(200).json(results))
+      .catch(error=>res.status(400).json(error))
+   }
+
+
+
+
+}

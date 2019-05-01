@@ -13,6 +13,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {AngularFontAwesomeModule} from "angular-font-awesome";
 import {SlideshowModule} from "ng-simple-slideshow";
+import {HttpClientModule} from "@angular/common/http";
+import {QueryApi} from "./commonservice/Request/QueryApi";
+import {NgFlashMessagesModule} from "ng-flash-messages";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,16 +28,20 @@ import {SlideshowModule} from "ng-simple-slideshow";
     TheatreDetailsComponent,
     HeaderComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    SlideshowModule
+    SlideshowModule,
+    NgFlashMessagesModule.forRoot()
+
   ],
-  providers: [],
+  providers: [QueryApi],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

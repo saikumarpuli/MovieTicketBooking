@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const registration = sequelize.define('registration', {
     fullname: DataTypes.STRING,
-    phoneNo: DataTypes.INTEGER,
+    phoneNo: DataTypes.DOUBLE,
     email: DataTypes.STRING,
     password: DataTypes.STRING
   }, {});

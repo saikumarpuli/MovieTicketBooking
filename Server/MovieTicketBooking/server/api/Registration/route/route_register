@@ -1,0 +1,11 @@
+import RegisterController from "../controller/controller_register";
+export default class RigisterRoute{
+  static init(router){
+    router
+      .route('/register')
+      .get(RegisterController.getall)
+      .post(RegisterController.createNew)
+  }
+
+
+}

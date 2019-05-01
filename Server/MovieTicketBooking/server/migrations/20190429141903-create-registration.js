@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       phoneNo: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DOUBLE
       },
       email: {
         type: Sequelize.STRING
