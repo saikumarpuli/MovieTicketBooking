@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RegisterService} from "../register.service";
 import {NgFlashMessageService} from "ng-flash-messages";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ export class SignupComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   details:any;
-  constructor(private formBuilder: FormBuilder,private service:RegisterService,private ngFlashMessageService: NgFlashMessageService) { }
+   constructor(private router: Router,private formBuilder: FormBuilder,private service:RegisterService,private ngFlashMessageService: NgFlashMessageService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -45,6 +46,8 @@ export class SignupComponent implements OnInit {
          timeout: 10000,
          type: 'success'
       });
+      this.router.navigate(['/login']);
+
     });
   }
 }

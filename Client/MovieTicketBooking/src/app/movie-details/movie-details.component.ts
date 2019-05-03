@@ -11,5 +11,5 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+link="https://www.youtube.com/watch?v=KypNI5ug4vk";
 }

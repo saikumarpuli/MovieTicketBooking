@@ -5,6 +5,11 @@ export default class RigisterRoute{
       .route('/register')
       .get(RegisterController.getall)
       .post(RegisterController.createNew)
+
+    router
+      .route('/register/:email')
+      .get(RegisterController.getbyid)
+
   }
 
 
