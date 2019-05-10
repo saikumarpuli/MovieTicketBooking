@@ -9,6 +9,7 @@
             <input type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
             <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
               <div *ngIf="f.fullname.errors.required"><p>fullName is required</p>.</div>
+              <div *ngIf="f.fullname.errors.pattern"><p>name contains only alphabets</p></div>
               <div *ngIf="f.fullname.errors.minlength"><p>fullName must be at least 6 characters</p></div>
             </div>
           </div>

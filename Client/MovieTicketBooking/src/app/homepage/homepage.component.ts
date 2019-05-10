@@ -42,24 +42,6 @@ export class HomepageComponent implements OnInit {
       console.log('adding an image url dynamically.');
       this.imageUrls.push('assets/images/anjali-cbi.jpg');
     }, 2000);
-    console.log(`
-                                  /   \\
- _                        )      ((   ))     (
-(@)                      /|\\      ))_((     /|\\
-|-|                     / | \\    (/\\|/\\)   / | \\                      (@)
-| | -------------------/--|-voV---\`|'/---Vov-|--\\---------------------|-|
-|-|                         '^\`   (o o)  '^\`                          | |
-| |                               \`\\Y/'                               |-|
-|-|                                                                   | |
-| |                                Hey                                |-|
-|-|                                                                   | |
-| |                                                                   |-|
-|_|___________________________________________________________________| |
-(@)              l   /\\ /         ( (       \\ /\\   l                \`\\|-|
-                 l /   V           \\ \\       V   \\ l                  (@)
-                 l/                _) )_          \\I
-                                   \`\\ /'
-				                     \`
-    `);
+
   }
 }

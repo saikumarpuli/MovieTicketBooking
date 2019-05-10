@@ -16,6 +16,7 @@ import {SlideshowModule} from "ng-simple-slideshow";
 import {HttpClientModule} from "@angular/common/http";
 import {QueryApi} from "./commonservice/Request/QueryApi";
 import {NgFlashMessagesModule} from "ng-flash-messages";
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {NgFlashMessagesModule} from "ng-flash-messages";
     TheatreDetailsComponent,
     HeaderComponent,
     FooterComponent,
+    AddMovieComponent,
 
   ],
   imports: [

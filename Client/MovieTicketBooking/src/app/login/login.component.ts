@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {RegisterService} from "../register.service";
 import {Router} from '@angular/router';
 import {NgFlashMessageService} from "ng-flash-messages";
+import {HeaderService} from "../header.service";
+import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,9 @@ export class LoginComponent implements OnInit {
   private users: any;
    private flag: number=0;
 
-  constructor(private router: Router,private formBuilder: FormBuilder,private service:RegisterService,private ngFlashMessageService: NgFlashMessageService) { }
+  constructor(private router: Router,private formBuilder: FormBuilder,private service:RegisterService,
+              private ngFlashMessageService: NgFlashMessageService,private headerservice:HeaderService,
+              private localstorage:LocalStorage) { }
 
   ngOnInit() {
     this.getdata();
@@ -27,6 +31,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
+
 
   private getdata() {
     this.service.getCourseDetails().subscribe((response) => {
@@ -48,10 +53,15 @@ export class LoginComponent implements OnInit {
       for (let user of this.users) {
         if ((user.email == value.email) && (user.password == value.password)) {
           this.flag=1;
+          this.send();
+/*
+          this.localstorage.setItem('data',this.flag).subscribe(() => {});
+*/
           }
       }
       if(this.flag==1){
         this.router.navigate(['/home']);
+
       }
       else{
         this.ngFlashMessageService.showFlashMessage({
@@ -62,4 +72,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  private send() {
+    this.headerservice.sendfalg(this.flag)
   }
+}
