@@ -10,7 +10,9 @@ export class HeaderService {
   constructor() { }
 
   sendfalg(flag: number){
+    console.log(flag);
     this.loginsource.next(flag);
+    console.log(this.loginsource.next(flag));
   }
 
 }
