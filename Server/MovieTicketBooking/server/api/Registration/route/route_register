@@ -9,7 +9,9 @@ export default class RigisterRoute{
     router
       .route('/register/:email')
       .get(RegisterController.getbyid)
-
+    router
+      .route('/login')
+      .get(RegisterController.getauthentication)
   }
 
 

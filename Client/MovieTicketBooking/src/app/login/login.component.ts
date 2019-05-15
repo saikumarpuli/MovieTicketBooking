@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.getdata();
     this.signinForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+      email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-zA-Z]{2,4}$/)]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
@@ -53,15 +53,13 @@ export class LoginComponent implements OnInit {
       for (let user of this.users) {
         if ((user.email == value.email) && (user.password == value.password)) {
           this.flag=1;
-          this.send();
-/*
-          this.localstorage.setItem('data',this.flag).subscribe(() => {});
-*/
+            this.localstorage.setItem('data',this.flag).subscribe(()=>{});
           }
       }
       if(this.flag==1){
+        this.localstorage.getItem('data').subscribe((params)=>{
+         });
         this.router.navigate(['/home']);
-
       }
       else{
         this.ngFlashMessageService.showFlashMessage({
@@ -72,7 +70,4 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  private send() {
-    this.headerservice.sendfalg(this.flag)
-  }
 }

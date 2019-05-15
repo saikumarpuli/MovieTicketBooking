@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'moviedetails', component: MovieDetailsComponent},
   {path: 'selectseats', component: SelectSeatsComponent},
   {path: 'theatredetails', component: TheatreDetailsComponent},
+  {path: 'addmovie', component:AddMovieComponent},
   {path: '**', redirectTo : '/home', pathMatch: 'full'},
-  {path: 'addmovie', component:AddMovieComponent}
 ];
 
 @NgModule({

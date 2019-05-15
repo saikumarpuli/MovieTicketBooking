@@ -6,7 +6,7 @@ import {IImage} from "ng-simple-slideshow";
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent {
 
 
   imageUrls: (string | IImage)[] = [
@@ -36,12 +36,4 @@ export class HomepageComponent implements OnInit {
    hideOnNoSlides: boolean = false;
   fullscreen: boolean = false;
 
-  ngOnInit() {
-    // adding an image url dynamically.
-    setTimeout(() => {
-      console.log('adding an image url dynamically.');
-      this.imageUrls.push('assets/images/anjali-cbi.jpg');
-    }, 2000);
-
-  }
 }

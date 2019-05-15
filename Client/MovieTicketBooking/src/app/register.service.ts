@@ -1,6 +1,5 @@
  import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {QueryApi} from "./commonservice/Request/QueryApi";
+ import {QueryApi} from "./commonservice/Request/QueryApi";
 import {Observable, of} from "rxjs";
 import {catchError} from "rxjs/operators";
 
@@ -8,7 +7,8 @@ import {catchError} from "rxjs/operators";
   providedIn: 'root'
 })
 export class RegisterService {
-  constructor(private http: HttpClient, private queryApi:QueryApi) { }
+  constructor(private queryApi:QueryApi) { }
+
   PostStudentDetails(params):Observable<any>{
      return this.queryApi.doPost('REGISTRATION',params)
       .pipe(
@@ -22,4 +22,5 @@ export class RegisterService {
         catchError(err => of([err]))
       );
   }
+
 }

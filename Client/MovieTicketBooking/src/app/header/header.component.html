@@ -10,15 +10,21 @@
         <input type="text" placeholder="Search.." id="search">
       </div>
       <div class="col-md-2 pt-2">
-        <nav>
-          <a routerLink="/login" routerLinkActive="active" id="signin"><b>Sign in</b></a>
+        <nav *ngIf=flag1>
+          <a class="btn" routerLink="/login" routerLinkActive="active" id="signin"><b>Sign in</b></a>
         </nav>
+        <nav  *ngIf=flag2>
+          <button class="btn " (click)="logout()"><a routerLink="/login" routerLinkActive="active"><b>logout</b></a></button>
+        </nav>
+      </div>
+      <div class="col-md-2 pt-2">
         <nav>
-          <a routerLink="/login" routerLinkActive="active"><b>logout</b></a>
+          <a routerLink="/addmovie"><b>add movie</b></a>
         </nav>
       </div>
      </div>
   </header>
 </div>
 
-<h1>{{data}}</h1>
+
+

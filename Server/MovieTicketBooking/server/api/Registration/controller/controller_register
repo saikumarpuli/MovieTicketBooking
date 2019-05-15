@@ -6,6 +6,14 @@ export default class RegisterController{
       .catch(error=>res.status(400).json("error occur"))
   }
 
+  static getauthentication(req,res){
+    console.log(req.query.email,req.query.password)
+    RegisterDao.getAuthentication(req.query.email,req.query.password)
+      .then(results=>res.status(200).json(results))
+      .catch(error=>res.status(400).json("error occur"))
+  }
+
+
   static createNew(req,res){
     RegisterDao.createNew(req.body)
       .then(results=>res.status(200).json(results))
