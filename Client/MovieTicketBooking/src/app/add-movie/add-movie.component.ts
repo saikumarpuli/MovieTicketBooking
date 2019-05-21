@@ -20,7 +20,7 @@ export class AddMovieComponent implements OnInit {
     this.AddCourseForm = this.formBuilder.group({
       Name:  ['', [Validators.required, Validators.minLength(3)]],
       ReleaseDate: ['', Validators.required],
-      Synapsis: ['', [Validators.required]],
+      Synapsis: ['', [Validators.required, Validators.maxLength(255)]],
       Cast: ['', [Validators.required]],
       Crew: ['', [Validators.required]],
     });

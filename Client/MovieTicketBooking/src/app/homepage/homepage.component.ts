@@ -1,12 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import {IImage} from "ng-simple-slideshow";
+import {MovieDetailsService} from "../movie-details.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit  {
+  private movies: any;
+
+constructor(private movieService:MovieDetailsService,private router:Router){}
+ngOnInit(){
+  this.getmovies();
+}
+  private getmovies() {
+    this.movieService.getmoviedetails().subscribe(users=>{
+      this.movies=users;
+      console.log(users)
+    })
+  }
+
 
 
   imageUrls: (string | IImage)[] = [
@@ -36,4 +51,10 @@ export class HomepageComponent {
    hideOnNoSlides: boolean = false;
   fullscreen: boolean = false;
 
+  getdetails(event) {
+       this.router.navigate(['/moviedetails',event],{skipLocationChange: true});
+       console.log(event)
+    }
+
 }
+

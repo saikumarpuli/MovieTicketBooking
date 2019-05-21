@@ -15,4 +15,11 @@ export class MovieDetailsService {
          catchError(err => of([err]))
        );
    }
- }
+
+   getmoviedetails():Observable<any>{
+     let params;
+     return this.queryApi.doGet('MOVIEDETAILS',params)
+       .pipe(
+         catchError(err => of([err]))
+       );
+   } }

@@ -24,6 +24,21 @@
              [fullscreen]="fullscreen">
   </slideshow>
 </div>
+
+
+<div *ngFor="let movie of movies">
+  <div class="card pb-3" style="width: 18rem;">
+  <button (click)="getdetails(movie)"> {{movie.Name}}{{movie.id}}</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--
 <div class="container-fluid  ">
   <div class="row">
     <div class="col-md-4 pt-5  ">
@@ -55,3 +70,4 @@
     </div>
   </div>
 </div>
+-->
