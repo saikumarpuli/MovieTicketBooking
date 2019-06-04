@@ -6,8 +6,8 @@
           <a routerLink="/home" routerLinkActive="active" class="fa fa-home" aria-hidden="true" id="home">My Movie</a>
         </nav>
       </div>
-      <div class="col-md-7">
-        <input type="text" placeholder="Search.." id="search">
+      <div class="input-group mb-3 col-md-7">
+          <input type="text" class="form-control" placeholder="Search.." aria-label="Search.." aria-describedby="basic-addon1">
       </div>
       <div class="col-md-2 pt-2">
         <nav *ngIf=flag1>
@@ -18,11 +18,20 @@
         </nav>
       </div>
       <div class="col-md-2 pt-2">
-        <nav>
-          <a routerLink="/addmovie"><b>add movie</b></a>
-        </nav>
+
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Admin Actions
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/addmovie"><b>add movie</b></a></li>
+            <li><a routerLink="/addtheater"><b>add Theater</b></a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+
       </div>
-     </div>
+    </div>
   </header>
 </div>
 

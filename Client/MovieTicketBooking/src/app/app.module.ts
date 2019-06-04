@@ -17,6 +17,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {QueryApi} from "./commonservice/Request/QueryApi";
 import {NgFlashMessagesModule} from "ng-flash-messages";
 import { AddMovieComponent } from './add-movie/add-movie.component';
+import { AddTheaterComponent } from './add-theater/add-theater.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {  NO_ERRORS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,11 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
     HeaderComponent,
     FooterComponent,
     AddMovieComponent,
+    AddTheaterComponent,
 
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -43,6 +48,8 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
     NgFlashMessagesModule.forRoot()
 
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
+
   providers: [QueryApi],
   bootstrap: [AppComponent]
 })

@@ -7,6 +7,7 @@ import {MovieDetailsComponent} from './movie-details/movie-details.component';
 import {TheatreDetailsComponent} from './theatre-details/theatre-details.component';
 import { SelectSeatsComponent } from './select-seats/select-seats.component';
 import {AddMovieComponent} from "./add-movie/add-movie.component";
+import {AddTheaterComponent} from "./add-theater/add-theater.component";
 
 const routes: Routes = [
   {path: 'home', component : HomepageComponent},
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path: 'selectseats', component: SelectSeatsComponent},
   {path: 'theatredetails', component: TheatreDetailsComponent},
   {path: 'addmovie', component:AddMovieComponent},
+  {path: 'addtheater', component:AddTheaterComponent},
+
   {path: '**', redirectTo : '/home', pathMatch: 'full'},
 ];
 

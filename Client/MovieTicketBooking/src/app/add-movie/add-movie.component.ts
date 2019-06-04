@@ -10,14 +10,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./add-movie.component.css']
 })
 export class AddMovieComponent implements OnInit {
-  AddCourseForm: FormGroup;
+  AddMovieForm: FormGroup;
   submitted = false;
-  public coursedata: any;
+  public moviedata: any;
    constructor(private router: Router,private formBuilder: FormBuilder,
               private movieService:MovieDetailsService,private ngFlashMessageService: NgFlashMessageService) {
   }
   ngOnInit() {
-    this.AddCourseForm = this.formBuilder.group({
+    this.AddMovieForm = this.formBuilder.group({
       Name:  ['', [Validators.required, Validators.minLength(3)]],
       ReleaseDate: ['', Validators.required],
       Synapsis: ['', [Validators.required, Validators.maxLength(255)]],
@@ -27,16 +27,16 @@ export class AddMovieComponent implements OnInit {
   }
   // convenience getter for easy access to form fields
   get f() {
-    return this.AddCourseForm.controls;
+    return this.AddMovieForm.controls;
   }
   onSubmit(value) {
     this.submitted = true;
-    this.coursedata = value;
-    if (this.AddCourseForm.invalid) {
+    this.moviedata = value;
+    if (this.AddMovieForm.invalid) {
       return;
     }
     else{
-      this.movieService.postmoviedetails(this.AddCourseForm.value).subscribe(users=>{})
+      this.movieService.postmoviedetails(this.AddMovieForm.value).subscribe(users=>{})
       this.ngFlashMessageService.showFlashMessage({
         messages: ["Successfully Registred"],
         dismissible: true,

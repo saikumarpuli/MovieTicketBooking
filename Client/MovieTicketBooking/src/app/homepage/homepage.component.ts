@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit  {
-  private movies: any;
+   movies: any;
 
 constructor(private movieService:MovieDetailsService,private router:Router){}
 ngOnInit(){
@@ -41,7 +41,7 @@ ngOnInit(){
   debug: boolean = false;
   backgroundSize: string = 'contain';
   backgroundPosition: string = 'center center';
-  backgroundRepeat: string = 'no-repeat';
+  backgroundRepeat: string = 'repeat';
   showDots: boolean = true;
   dotColor: string = '#FFF';
   showCaptions: boolean = true;
