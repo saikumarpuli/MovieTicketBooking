@@ -25,11 +25,11 @@ ngOnInit(){
 
 
   imageUrls: (string | IImage)[] = [
-    { url: 'assets/images/118.jpg', caption: '118 movie', href: '#config' },
+    { url: 'assets/118.jpg', caption: '118 movie', href: '#config' },
     { url: 'assets/images/f2.jpg',caption: 'f2', clickAction: () => alert('custom click function') },
     { url: 'assets/images/viswasam.jpg', caption: 'viswasam', href: 'https://www.apple.com/' },
     {url:'assets/images/urihindi.jpg', caption:'URI'},
-    { url: 'assets/images/captain-marvel.jpg', backgroundSize: 'contain', backgroundPosition: 'center',}
+    { url: 'assets/images/captain-marvel.jpg', caption:'Captain Marvel'}
   ];
   height: string = '400px';
   minHeight: string;

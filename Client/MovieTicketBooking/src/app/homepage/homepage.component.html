@@ -11,7 +11,7 @@
              [autoPlay]="autoPlay"
              [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
              [debug]="debug"
-             [backgroundSize]="backgroundSize"
+             [backgroundSize]="fullscreen"
              [backgroundPosition]="backgroundPosition"
              [backgroundRepeat]="backgroundRepeat"
              [showDots]="showDots"
@@ -28,10 +28,12 @@
  <div class="table">
    <div class="row">
  <div *ngFor="let movie of movies"><td>
-   <div class="card pb-3 mr-3" style="width: 18rem; height: 20rem; ">
-     <div class="card-body  align-items-center d-flex justify-content-center" (click)="getdetails(movie)">
-
-       {{movie.Name}}{{movie.id}}
+   <div class="card pb-3 mr-3" style="width: 20rem; height: 28rem; ">
+     <div class="card-img  align-items-center d-flex justify-content-center" (click)="getdetails(movie)">
+          <img src="../../assets/{{movie.Name}}.jpeg" height=100% width=100%>
+     </div>
+     <div class="card-img-bottom">
+       <b>{{movie.Name}}</b>
      </div>
   </div>
  </td>
