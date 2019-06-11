@@ -8,6 +8,9 @@ import RoutesConfig from "./config/routes.conf";
 const app = express();
 
 RoutesConfig.init(app);
+app.get("/",(req,res)=>{
+  res.send("ok its work");
+})
  Routes.init(app, express.Router());
 
 http.createServer(app)
