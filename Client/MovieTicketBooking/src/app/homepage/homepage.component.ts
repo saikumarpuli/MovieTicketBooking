@@ -39,7 +39,6 @@ ngOnInit(){
   autoPlay: boolean = true;
   stopAutoPlayOnSlide: boolean = true;
   debug: boolean = false;
-  backgroundSize: string = 'contain';
   backgroundPosition: string = 'center center';
   backgroundRepeat: string = 'repeat';
   showDots: boolean = true;
