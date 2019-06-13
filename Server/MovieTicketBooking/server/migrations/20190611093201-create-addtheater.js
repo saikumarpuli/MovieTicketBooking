@@ -11,6 +11,9 @@ module.exports = {
       theatername: {
         type: Sequelize.STRING
       },
+      address: {
+        type: Sequelize.STRING
+      },
       city: {
         type: Sequelize.STRING
       },
@@ -21,6 +24,15 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      movie_id:{
+        type:Sequelize.INTEGER,
+        references:{
+          model:'moviedetails',
+          foreignkey:'id'
+        },
+        onDelete:'cascade',
+        onUpdate:'cascade'
       }
     });
   },
