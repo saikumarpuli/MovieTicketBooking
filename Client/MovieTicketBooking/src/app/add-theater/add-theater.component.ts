@@ -22,8 +22,10 @@ export class AddTheaterComponent implements OnInit {
   ngOnInit() {
 
     this.AddTheaterForm = this.formBuilder.group({
-      Name: ['', [Validators.required, Validators.minLength(3)]],
-      ReleaseDate: ['', Validators.required],
+      theatername: ['', [Validators.required, Validators.minLength(3)]],
+      address: ['', [Validators.required, Validators.minLength(3)]],
+      city: ['', [Validators.required, Validators.minLength(3)]],
+      movieid: ['', Validators.required],
     });
   }
 

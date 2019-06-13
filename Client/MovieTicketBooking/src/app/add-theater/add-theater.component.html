@@ -4,17 +4,34 @@
       <div ><h3><b>Add Movie Details</b></h3></div>
       <div class="form-group">
         <label>Name:</label>
-        <input type="text" placeholder="Movie name" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
-        <div *ngIf="submitted && !!f.Name.errors" class="invalid-feedback">
-          <div *ngIf="!!f.Name.errors.required">Name is required</div>
-          <div *ngIf="!!f.Name.errors.minlength"><p>Name must be at least 3 characters</p></div>
+        <input type="text" placeholder="Theater name" formControlName="theatername" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.theatername.errors }" />
+        <div *ngIf="submitted && !!f.theatername.errors" class="invalid-feedback">
+          <div *ngIf="!!f.theatername.errors.required">theatername is required</div>
+          <div *ngIf="!!f.theatername.errors.minlength"><p>theatername must be at least 3 characters</p></div>
         </div>
       </div>
       <div class="form-group">
-        <label>Release date:</label>
-        <input type="date" placeholder="Release date" formControlName="ReleaseDate"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ReleaseDate.errors }" />
-        <div *ngIf="submitted && !!f.ReleaseDate.errors" class="invalid-feedback">
-          <div *ngIf="!!f.ReleaseDate.errors.required">ReleaseDate is required</div>
+        <label>Address:</label>
+        <input type="text" placeholder="Address" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+        <div *ngIf="submitted && !!f.address.errors" class="invalid-feedback">
+          <div *ngIf="!!f.address.errors.required">Address is required</div>
+          <div *ngIf="!!f.address.errors.minlength"><p>Address must be at least 3 characters</p></div>
+        </div>
+      </div>
+      <div class="form-group">
+      <label>City:</label>
+      <input type="text" placeholder="City" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+      <div *ngIf="submitted && !!f.city.errors" class="invalid-feedback">
+        <div *ngIf="!!f.city.errors.required">City is required</div>
+        <div *ngIf="!!f.city.errors.minlength"><p>City must be at least 3 characters</p></div>
+      </div>
+    </div>
+
+      <div class="form-group">
+        <label>Movie id:</label>
+        <input type="number" placeholder="Movie id" formControlName="movieid"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.movieid.errors }" />
+        <div *ngIf="submitted && !!f.movieid.errors" class="invalid-feedback">
+          <div *ngIf="!!f.movieid.errors.required">Movie id is required</div>
         </div>
       </div>
 
