@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {NgFlashMessageService} from "ng-flash-messages";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {AddtheaterService} from "../addtheater.service";
 
 @Component({
   selector: 'app-add-theater',
@@ -15,7 +15,7 @@ export class AddTheaterComponent implements OnInit {
   public theaterdata: any;
 
   constructor(private router: Router, private formBuilder: FormBuilder,
-               private ngFlashMessageService: NgFlashMessageService) {
+               private ngFlashMessageService: NgFlashMessageService,private addtheater:AddtheaterService) {
   }
 
 
@@ -25,7 +25,7 @@ export class AddTheaterComponent implements OnInit {
       theatername: ['', [Validators.required, Validators.minLength(3)]],
       address: ['', [Validators.required, Validators.minLength(3)]],
       city: ['', [Validators.required, Validators.minLength(3)]],
-      movieid: ['', Validators.required],
+      movie_id: ['', Validators.required],
     });
   }
 
@@ -40,7 +40,8 @@ export class AddTheaterComponent implements OnInit {
     if (this.AddTheaterForm.invalid) {
       return;
     } else {
-      console.log(this.theaterdata)
+
+      this.addtheater.posttheaterdetails(this.AddTheaterForm.value).subscribe(users=>{})
       this.ngFlashMessageService.showFlashMessage({
         messages: ["Successfully Registred"],
         dismissible: true,

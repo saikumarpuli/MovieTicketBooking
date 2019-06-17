@@ -29,9 +29,9 @@
 
       <div class="form-group">
         <label>Movie id:</label>
-        <input type="number" placeholder="Movie id" formControlName="movieid"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.movieid.errors }" />
-        <div *ngIf="submitted && !!f.movieid.errors" class="invalid-feedback">
-          <div *ngIf="!!f.movieid.errors.required">Movie id is required</div>
+        <input type="number" placeholder="Movie id" formControlName="movie_id"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.movie_id.errors }" />
+        <div *ngIf="submitted && !!f.movie_id.errors" class="invalid-feedback">
+          <div *ngIf="!!f.movie_id.errors.required">Movie id is required</div>
         </div>
       </div>
 

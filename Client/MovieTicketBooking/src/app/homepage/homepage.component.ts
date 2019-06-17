@@ -18,8 +18,7 @@ ngOnInit(){
   private getmovies() {
     this.movieService.getmoviedetails().subscribe(users=>{
       this.movies=users;
-      console.log(users)
-    })
+     })
   }
 
 
