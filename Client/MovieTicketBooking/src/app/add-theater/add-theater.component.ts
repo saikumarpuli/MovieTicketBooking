@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {NgFlashMessageService} from "ng-flash-messages";
-import {AddtheaterService} from "../addtheater.service";
+import {AddtheaterService} from "../services/addtheater.service";
 
 @Component({
   selector: 'app-add-theater',

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddMovieComponent } from './add-movie.component';
+// @ts-ignore
+import {describe,beforeEach,it,expect} from 'jasmine';
 
 describe('AddMovieComponent', () => {
   let component: AddMovieComponent;

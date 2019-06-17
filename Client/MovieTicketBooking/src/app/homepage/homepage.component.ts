@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IImage} from "ng-simple-slideshow";
-import {MovieDetailsService} from "../movie-details.service";
+import {MovieDetailsService} from "../services/movie-details.service";
 import {Router} from "@angular/router";
 
 @Component({

@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'addmovie', component:AddMovieComponent},
   {path: 'addtheater', component:AddTheaterComponent},
 
-  {path: '**', redirectTo : '/home', pathMatch: 'full'},
+  {path: '**', redirectTo : '/login', pathMatch: 'full'},
 ];
 
 @NgModule({

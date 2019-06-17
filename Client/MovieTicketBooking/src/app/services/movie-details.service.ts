@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
- import {QueryApi} from "./commonservice/Request/QueryApi";
+ import {QueryApi} from "../commonservice/Request/QueryApi";
 import {Observable, of} from "rxjs";
 import {catchError} from "rxjs/operators";
  @Injectable({

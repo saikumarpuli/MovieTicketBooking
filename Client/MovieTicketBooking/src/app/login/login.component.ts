@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {RegisterService} from "../register.service";
+import {RegisterService} from "../services/register.service";
 import {Router} from '@angular/router';
 import {NgFlashMessageService} from "ng-flash-messages";
-import {HeaderService} from "../header.service";
+import {HeaderService} from "../services/header.service";
 import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Component({

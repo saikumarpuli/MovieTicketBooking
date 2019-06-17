@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
- import {MovieDetailsService} from "../movie-details.service";
+ import {MovieDetailsService} from "../services/movie-details.service";
  import {NgFlashMessageService} from "ng-flash-messages";
 
 @Component({
