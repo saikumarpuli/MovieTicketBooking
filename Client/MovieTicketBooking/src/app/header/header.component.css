@@ -1,22 +1,7 @@
-
-#search {
-  padding: 20px 16px;
-  border-radius: 2px 0 0 2px;
-  font-size: 14px;
-  height: 36px;
-  width: 100%;
-  position: static;
-}
-
 #header {
-  width: 100%;
-  color: white;
-  text-align: center;
+   color: white;
   left: 0;
   position: fixed;
   background-color: aqua;
 }
-.container-fluid{
-  margin-top: 35px;
-  padding-top: 25px;
-}
+

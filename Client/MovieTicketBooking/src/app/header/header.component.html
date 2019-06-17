@@ -1,26 +1,23 @@
 <div class="container-fluid mb-5">
   <header class="fixed-top" id="header">
-    <div class="row pt-2 pb-2 ">
-      <div class="col-md-1" >
-        <nav>
-          <a routerLink="/home" routerLinkActive="active" class="fa fa-home" aria-hidden="true" id="home">My Movie</a>
-        </nav>
-      </div>
-      <div class="input-group mb-3 col-md-7">
+    <div class="row align-items-center pb-2 pt-2">
+    <span class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-lx-2 ">
+          <a routerLink="/home" routerLinkActive="active" class="fa fa-home pl-3" aria-hidden="true" >My Movie</a>
+    </span>
+      <span class="input-group col-xs-5 col-md-5 col-sm-5 col-lg-5 col-lx-5">
           <input type="text" class="form-control" placeholder="Search.." aria-label="Search.." aria-describedby="basic-addon1">
-      </div>
-      <div class="col-md-2 pt-2">
+      </span>
+      <span class="col-xs-2 col-md-2 col-sm-2 col-lg-2 col-lx-2">
         <nav *ngIf=flag1>
           <a class="btn" routerLink="/login" routerLinkActive="active" id="signin"><b>Sign in</b></a>
         </nav>
         <nav  *ngIf=flag2>
           <button class="btn " (click)="logout()"><a routerLink="/login" routerLinkActive="active"><b>logout</b></a></button>
         </nav>
-      </div>
-      <div class="col-md-2 pt-2">
+      </span>
 
-
-        <div class="dropdown">
+      <span class="col-xs-3 col-md-3 col-sm-3 col-lg-3 col-lx-3">
+        <span class="dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Admin Actions
             <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -28,9 +25,8 @@
             <li><a routerLink="/addtheater"><b>add Theater</b></a></li>
             <li><a href="#">JavaScript</a></li>
           </ul>
-        </div>
-
-      </div>
+        </span>
+      </span>
     </div>
   </header>
 </div>
