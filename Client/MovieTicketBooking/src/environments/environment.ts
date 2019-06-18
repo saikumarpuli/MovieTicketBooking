@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
+/*
   API_ROOT: 'http://192.168.0.173:3333/'
+*/
+  API_ROOT: 'https://onlineticketbookingserver.herokuapp.com/'
+
 };
 
 /*
