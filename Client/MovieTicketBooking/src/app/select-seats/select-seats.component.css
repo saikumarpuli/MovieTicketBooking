@@ -1,3 +1,4 @@
+/*
 body{background-color: white;}
 header{background-color:lightblue ;  text-align:center;    border-style:solid;   border-color:lightblue ; height:50px }
 #screen{ color:white;  background-color:red;    border-style:solid;   border-color:red;     text-align:center;   height:50px;}
@@ -5,3 +6,11 @@ header{background-color:lightblue ;  text-align:center;    border-style:solid;  
 #Silver{ color:white;  background-color:lightgreen;    border-style:solid;   border-color:lightgreen;     text-align:center;   height:40px;}
 #Gold{ color:white;  background-color:lightgreen;    border-style:solid;   border-color:lightgreen;     text-align:center;   height:40px;}
 
+*/
+
+
+
+#gold{
+  padding-left: 45%;
+  padding-right: 40%;
+}
