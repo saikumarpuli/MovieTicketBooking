@@ -1,34 +1,9 @@
  <!--The content below is only a placeholder and can be replaced.-->
 <div style="margin-bottom:25px">
-
-  <slideshow #slideshow
-             [imageUrls]="imageUrls"
-             [height]="height"
-             [minHeight]="minHeight"
-             [arrowSize]="arrowSize"
-             [showArrows]="showArrows"
-             [disableSwiping]="disableSwiping"
-             [autoPlay]="autoPlay"
-             [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
-             [debug]="debug"
-             [backgroundSize]="fullscreen"
-             [backgroundPosition]="backgroundPosition"
-             [backgroundRepeat]="backgroundRepeat"
-             [showDots]="showDots"
-             [dotColor]="dotColor"
-             [showCaptions]="showCaptions"
-             [captionColor]="captionColor"
-             [captionBackground]="captionBackground"
-             [lazyLoad]="lazyLoad"
-             [hideOnNoSlides]="hideOnNoSlides"
-             [fullscreen]="fullscreen">
-  </slideshow>
-</div>
-
  <div class="table">
    <div class="row">
  <div *ngFor="let movie of movies"><td>
-   <div class="card pb-3 mr-3" style="width: 20rem; height: 28rem; ">
+   <div class="card pb-3 mr-3" style="width: 15rem; height: 21rem; ">
      <div class="card-img  align-items-center d-flex justify-content-center" (click)="getdetails(movie)">
           <img src="../../assets/{{movie.Name}}.jpeg" height=100% width=100%>
      </div>
