@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {IImage} from "ng-simple-slideshow";
 import {MovieDetailsService} from "../services/movie-details.service";
 import {Router} from "@angular/router";
 
@@ -10,6 +9,7 @@ import {Router} from "@angular/router";
 })
 export class HomepageComponent implements OnInit  {
    movies: any;
+  p: number = 1;
 
 constructor(private movieService:MovieDetailsService,private router:Router){}
 ngOnInit(){

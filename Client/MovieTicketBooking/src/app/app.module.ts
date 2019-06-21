@@ -22,6 +22,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  NO_ERRORS_SCHEMA } from '@angular/core';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { TheaterdetailsComponent } from './theaterdetails/theaterdetails.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AddMovieComponent,
     AddTheaterComponent,
     UserdetailsComponent,
+    TheaterdetailsComponent,
 
   ],
   imports: [

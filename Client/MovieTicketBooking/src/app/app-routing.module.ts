@@ -9,6 +9,7 @@ import { SelectSeatsComponent } from './select-seats/select-seats.component';
 import {AddMovieComponent} from "./add-movie/add-movie.component";
 import {AddTheaterComponent} from "./add-theater/add-theater.component";
 import {UserdetailsComponent} from "./userdetails/userdetails.component";
+import {TheaterdetailsComponent} from "./theaterdetails/theaterdetails.component";
 
 const routes: Routes = [
   {path: 'home', component : HomepageComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'addmovie', component:AddMovieComponent},
   {path: 'addtheater', component:AddTheaterComponent},
   {path:'showusers',component:UserdetailsComponent},
+  {path:'showtheaters' , component:TheaterdetailsComponent},
   {path: '**', redirectTo : '/login', pathMatch: 'full'},
 ];
 

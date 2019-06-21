@@ -1,0 +1,25 @@
+<div class="container col col-lg-12 col-sm-12">
+  <h2 class="mt-3 text-center text-primary"><b>Theaters Details</b></h2>
+  <table class="table">
+    <thead class="thead-dark ">
+    <tr>
+      <th style=" width: 124px;"><b>id</b></th>
+      <th><b>theatername</b></th>
+      <th><b>address</b></th>
+      <th><b>city</b></th>
+      <th><b>movie_id</b></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let theater of theaterlist | paginate: { itemsPerPage: 4, currentPage: p }" >
+      <td style=" width: 124px;">{{theater.id}}</td>
+      <td>{{theater.theatername}}</td>
+      <td>{{theater.address}}</td>
+      <td>{{theater.city}}</td>
+      <td>{{theater.movie_id}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>

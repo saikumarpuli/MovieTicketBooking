@@ -2,7 +2,8 @@
 <div style="margin-bottom:25px">
  <div class="table">
    <div class="row">
- <div *ngFor="let movie of movies"><td>
+ <div *ngFor="let movie of movies  | paginate: { itemsPerPage: 8, currentPage: p }">
+   <td>
    <div class="card pb-3 mr-3" style="width: 15rem; height: 21rem; ">
      <div class="card-img  align-items-center d-flex justify-content-center" (click)="getdetails(movie)">
           <img src="../../assets/{{movie.Name}}.jpeg" height=100% width=100%>
@@ -15,3 +16,5 @@
  </div>
    </div>
   </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

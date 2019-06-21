@@ -1,9 +1,9 @@
 <div class="container col col-lg-12 col-sm-12">
    <h2 class="mt-3 text-center text-primary"><b>Registerd User Details</b></h2>
-   <table class="table table-hover">
+   <table class="table">
      <thead class="thead-dark ">
      <tr >
-       <th><b>id</b></th>
+       <th style=" width: 124px;"><b>id</b></th>
        <th><b>fullname</b></th>
        <th><b>phoneNo</b></th>
        <th><b>email</b></th>
@@ -12,14 +12,13 @@
      </thead>
      <tbody>
      <tr  *ngFor="let user of userdetails | paginate: { itemsPerPage: 5, currentPage: p }" >
-       <td>{{user.id}}</td>
+       <td style=" width: 124px;">{{user.id}}</td>
        <td>{{user.fullname}}</td>
        <td>{{user.phoneNo}}</td>
        <td>{{user.email}}</td>
        <td>{{user.password}}</td>
      </tr>
-     <pagination-controls (pageChange)="p = $event"></pagination-controls>
-
      </tbody>
    </table>
- </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
