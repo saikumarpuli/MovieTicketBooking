@@ -20,6 +20,8 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
 import { AddTheaterComponent } from './add-theater/add-theater.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  NO_ERRORS_SCHEMA } from '@angular/core';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,12 @@ import {  NO_ERRORS_SCHEMA } from '@angular/core';
     FooterComponent,
     AddMovieComponent,
     AddTheaterComponent,
+    UserdetailsComponent,
 
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
+    NgxPaginationModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
