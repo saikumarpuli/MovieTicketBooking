@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   shows.associate = function(models) {
     shows.belongsToMany(models.moviedetails,{
       through:'movieshows',
-      as:shows,
+      as:'shows',
       foreignKey:{
         name:'show_id',
         allowNull:false

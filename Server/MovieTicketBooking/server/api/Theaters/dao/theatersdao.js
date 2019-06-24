@@ -10,7 +10,6 @@ export default class MoviesDao {
   }
   static getall(){
     return new Promise((resolve, reject) => {
-      console.log("this is route");
       models.addtheater.findAll({})
         .then(results => resolve(results))
         .catch(error => reject(error));

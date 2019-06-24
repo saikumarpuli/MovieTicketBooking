@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
     })
     moviedetails.belongsToMany(models.shows,{
       through:'movieshows',
-        as:moviedetails,
+        as:'moviedetails',
       foreignKey:{
-        name:movie_id,
-        as:'moviedetails'
+        name:'movie_id',
+        allowNull: false
       }
         })
   };
