@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const shows = sequelize.define('shows', {
-    showtimings: DataTypes.INTEGER
+    showtimings: DataTypes.TIME
   }, {});
   shows.associate = function(models) {
     shows.belongsToMany(models.moviedetails,{

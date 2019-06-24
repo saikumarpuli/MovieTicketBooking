@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       showtimings: {
-        type: Sequelize.INTEGER
+        type: Sequelize.TIME
       },
       createdAt: {
         allowNull: false,
