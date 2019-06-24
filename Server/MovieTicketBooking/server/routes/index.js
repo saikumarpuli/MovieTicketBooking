@@ -9,6 +9,7 @@ export default class Routes {
      RigisterRoute.init(router);
      MoviesRoute.init(router);
      theatersroute.init(router);
+     showsroute.init(router);
      app.use("/", router);
    }
 }
